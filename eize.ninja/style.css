@@ -2,6 +2,10 @@ html {
     font-size: 20pt;
 }
 
+* {
+    box-sizing: padding-box;
+}
+
 body {
     --normal-font: 'Dosis', sans-serif;
     --hard-font: 'Open Sans Condensed', sans-serif;
@@ -15,10 +19,14 @@ body {
 
     --spacing-A: 20px;
     --small: 0.7rem;
-    --tiny: 0.4rem;
+    --tiny: 0.5rem;
+    --short: 0.7em;
+    --shorter: 0.4em;
+
+    --underline: double;
 
     color: var(--color-C);
-    background: var(--color-D);
+    background: linear-gradient(56deg, var(--color-D1) -90vh, var(--color-D));
 
     width: 640px;
     min-height: 100vh;
@@ -39,9 +47,20 @@ h1 {
     margin-bottom: 0.55em;
 }
 
+p {
+    margin: 0.8em 0 1.2em;
+}
+
 a {
     color: var(--color-em);
-    text-decoration: underline double;
+    transition: color 120ms;
+
+    text-decoration: underline var(--underline);
+}
+
+a:hover {
+    color: var(--color-A);
+    text-shadow: var(--color-B) 0 0 5px;
 }
 
 #what-is-this {
@@ -58,29 +77,39 @@ a {
     color: var(--color-em);
 }
 
+.tiny {
+    font-size: var(--tiny);
+}
+
 .signature {
     /* font-style: italic; */
-    font-size: var(--small);
+    line-height: 0.9;
     color: var(--color-D1);
 }
 
 .signature .bio {
     font-style: italic;
+    font-size: var(--small);
+    line-height: 1.05;
+}
+
+.signature .name {
+    color: var(--color-A);
 }
 
 div.signature p {
-    margin: 0;
+    margin: var(--short) 0;
 }
 
 ul.social {
     display: inline-flex;
     justify-content: space-between;
 
-    margin: 0;
+    margin: 0 0 0.2em;
     padding: 0;
 
     list-style: none;
-    font-size: var(--tiny);
+    font-size: var(--small);
     font-style: normal;
 
     color: var(--color-D1)
@@ -91,4 +120,14 @@ ul.social {
 
     margin: 0 0.6em;
     text-align: center;
+}
+
+.social a {
+    color: var(--color-C);
+    text-decoration: none;
+}
+
+.social a:hover {
+    color: var(--color-A);
+    text-decoration: underline var(--underline);
 }
