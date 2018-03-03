@@ -11,10 +11,11 @@ body {
     --color-C: #00818a;
     --color-D: #09194f;
     --color-D1: #4d5e94;
-
     --color-em: var(--color-B);
 
     --spacing-A: 20px;
+    --small: 0.7rem;
+    --tiny: 0.4rem;
 
     color: var(--color-C);
     background: var(--color-D);
@@ -55,4 +56,39 @@ a {
 
 #amir-email-user {
     color: var(--color-em);
+}
+
+.signature {
+    /* font-style: italic; */
+    font-size: var(--small);
+    color: var(--color-D1);
+}
+
+.signature .bio {
+    font-style: italic;
+}
+
+div.signature p {
+    margin: 0;
+}
+
+ul.social {
+    display: inline-flex;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    font-size: var(--tiny);
+    font-style: normal;
+
+    color: var(--color-D1)
+}
+
+.social li {
+    flex: 0;
+
+    margin: 0 0.6em;
+    text-align: center;
 }
